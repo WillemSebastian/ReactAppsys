@@ -11,4 +11,4 @@ var routes = require('./routes');
 routes(app);
 
 app.listen(port);
-console.log('Learn Node JS With Kiddy, RESTful API server started on: ' + port);
+console.log('Hello from node js: ' + port);
