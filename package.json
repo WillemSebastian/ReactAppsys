@@ -7,11 +7,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "client": "cd frontend && yarn && yarn start",
+    "client": "cd frontend && yarn start",
     "server": "nodemon server.js",
-    "dev": "yarn && concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "node server.js",
-    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "npm install && cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
     "react": "^16.8.2",
